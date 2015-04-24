@@ -16,18 +16,18 @@
       
      
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to 'Home', root_path %></li>
-        <li><%= link_to 'About US', about_path %></li>
+        <li><%= link_to '主页', root_path %></li>
+        <li><%= link_to '关于我', about_path %></li>
         <% if user_signed_in? %>
           <li><%= link_to new_pin_path do %>
-            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> New Pin
+            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> 新的照片
           <% end %>
           </li>
 
-          <li><%= link_to 'Account Settings', edit_user_registration_path %></li>
-          <li><%= link_to 'Log out', destroy_user_session_path, method: :delete %></li>
+          <li><%= link_to '账户设置', edit_user_registration_path %></li>
+          <li><%= link_to '退出登录', destroy_user_session_path, method: :delete %></li>
         <% else %>
-          <li><%= link_to 'Sign in', new_user_session_path%></li>
+          <li><%= link_to '登录', new_user_session_path%></li>
         <% end %>
       </ul>
     </div><!-- /.navbar-collapse -->
